@@ -1,3 +1,14 @@
 <!-- <h1>Header Part</h1> -->
+<div>
+    <a routerLink="/about-us">about-us</a>
+    <a routerLink="how-it-works">How it works</a>
+    <a routerLink="auth/login">Login</a>
+    <a routerLink="public/all-books">All Books</a>
+    <a [routerLink]="['/public/book-details','33','author','221']">Book-Details</a>
+<!-- diffrence between href and routerLink => {routerlink didn't refresh and load whole page but for href it's refresh the page} -->
+    <!-- <a href="/about-us">about-us</a>
+    <a href="how-it-works">How it works</a>
+    <a href="auth/login">Login</a> -->
+</div>
 <router-outlet></router-outlet>
 <!-- <h1>Footer Part</h1> -->
