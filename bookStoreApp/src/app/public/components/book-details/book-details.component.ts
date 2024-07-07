@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class BookDetailsComponent implements OnInit {
   public id: number = 0;
   public autherId: number = 0;
+  name:string='';
   constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
     console.log(this.route);
@@ -19,5 +20,9 @@ export class BookDetailsComponent implements OnInit {
     console.log(this.autherId);
     })
 
+
+    this.route.queryParams.subscribe(queryParam=>{
+      this.name=queryParam['name'];
+    })
   }
 }
