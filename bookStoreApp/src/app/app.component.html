@@ -2,7 +2,7 @@
 <div>
     <a routerLink="/about-us">about-us</a>
     <a routerLink="how-it-works">How it works</a>
-    <a routerLink="auth/login">Login</a>
+    <a routerLink="auth/login" [queryParams]="{name:'abhishek'}">Login</a>
     <a routerLink="public/all-books">All Books</a>
     <a [routerLink]="['/public/book-details','33','author','221']">Detail From App</a>
 <!-- diffrence between href and routerLink => {routerlink didn't refresh and load whole page but for href it's refresh the page} -->
