@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
   goTosignUp(){
     this.router.navigate(['auth/signup']);
   }
-  bookDetails(){
-    this.router.navigate(['public/book-details/',51,'author',67,]);
+  bookDetails(id:number,authorId:number){
+    this.router.navigate(['public/book-details/',id,'author',authorId],{queryParams:{name:'abhi',email:'abhi@gmail.com'}});
   }
 
 }
