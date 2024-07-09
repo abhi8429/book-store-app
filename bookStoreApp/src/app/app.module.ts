@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { RouterModule } from '@angular/router';
 import { UserModule } from './user/user.module';
 import { PublicModule } from './public/public.module';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +17,12 @@ import { PublicModule } from './public/public.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AuthModule,
     RouterModule,
     UserModule,
-    PublicModule
+    PublicModule,
+    SharedModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
