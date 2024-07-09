@@ -6,16 +6,10 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
 
 const routes: Routes = [
-  {
-    path: 'auth', component: AuthComponent,
-    children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'signup', component: SignupComponent },
-      { path: 'change-password', component: ChangePasswordComponent }
-    ]
-  }
-
-
+    { path: 'login', component: LoginComponent },
+    { path: 'signup', component: SignupComponent },
+    { path: 'change-password', component: ChangePasswordComponent }
+ 
 ];
 
 @NgModule({

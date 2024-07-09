@@ -4,10 +4,10 @@ import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthModule } from './auth/auth.module';
+// import { AuthModule } from './auth/auth.module';
 import { RouterModule } from '@angular/router';
-import { UserModule } from './user/user.module';
-import { PublicModule } from './public/public.module';
+// import { UserModule } from './user/user.module';
+// import { PublicModule } from './public/public.module';
 import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
@@ -17,10 +17,8 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    AuthModule,
     RouterModule,
-    UserModule,
-    PublicModule,
+    // PublicModule,
     SharedModule,
     AppRoutingModule,
   ],
