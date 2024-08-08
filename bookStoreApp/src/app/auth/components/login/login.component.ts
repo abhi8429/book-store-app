@@ -14,17 +14,17 @@ export class LoginComponent implements OnInit {
 
   name:string='';
   ngOnInit(): void {
-    this.route.queryParams.subscribe(queryParam=>{
-      console.log(queryParam);
-      this.name=queryParam['name'];
-    })
+    // this.route.queryParams.subscribe(queryParam=>{
+    //   console.log(queryParam);
+    //   this.name=queryParam['name'];
+    // })
   }
 
-  goTosignUp(){
-    this.router.navigate(['auth/signup']);
-  }
-  bookDetails(id:number,authorId:number){
-    this.router.navigate(['public/book-details/',id,'author',authorId],{queryParams:{name:'abhi',email:'abhi@gmail.com'}});
-  }
+  // goTosignUp(){
+  //   this.router.navigate(['auth/signup']);
+  // }
+  // bookDetails(id:number,authorId:number){
+  //   this.router.navigate(['public/book-details/',id,'author',authorId],{queryParams:{name:'abhi',email:'abhi@gmail.com'}});
+  // }
 
 }
