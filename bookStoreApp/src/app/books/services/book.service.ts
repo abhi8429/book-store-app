@@ -59,6 +59,36 @@ return [
       currency:'BDT',
       value:24
     }
+  },
+  {
+    id:6,
+    title:'Php Fundamental',
+    totalPages:988,
+    author:'James Bond',
+    price:{
+      currency:'ANG',
+      value:98
+    }
+  },
+  {
+    id:7,
+    title:'ReactJs Fundamental',
+    totalPages:777,
+    author:'Ruby Paul',
+    price:{
+      currency:'BDT',
+      value:24
+    }
+  },
+  {
+    id:8,
+    title:'Java Fundamental',
+    totalPages:988,
+    author:'James Gosline',
+    price:{
+      currency:'ANG',
+      value:98
+    }
   }
 ]
   }
