@@ -6,4 +6,5 @@ export class TestService  {
 constructor(){
   
 }
+public status:boolean=true;
 }

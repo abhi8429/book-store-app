@@ -4,6 +4,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MaterialModule } from './material.module';
 import { FooterComponent } from './footer/footer.component';
+import { AuthorsComponent } from './components/authors/authors.component';
 
 
 
@@ -11,12 +12,13 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     NotFoundComponent,
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    AuthorsComponent
   ],
   imports: [
     CommonModule, 
     MaterialModule
   ],
-  exports:[ToolbarComponent,FooterComponent,MaterialModule]
+  exports:[ToolbarComponent,FooterComponent,MaterialModule,AuthorsComponent]
 })
 export class SharedModule { }

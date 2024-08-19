@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
 import { CounterService } from 'src/app/shared/services/counter.service';
 
 @Component({
@@ -7,7 +7,9 @@ import { CounterService } from 'src/app/shared/services/counter.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-constructor(public _counterService:CounterService){
+constructor(public _counterService:CounterService,
+  @Inject('appTitle') public config:any
+){
 
 }
  increase(){
