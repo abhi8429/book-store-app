@@ -1,22 +1,32 @@
-import { Component, Inject, inject } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  inject,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { MatButton } from '@angular/material/button';
+import { AuthorsComponent } from 'src/app/shared/components/authors/authors.component';
 import { CounterService } from 'src/app/shared/services/counter.service';
+import { TestService } from 'src/app/shared/services/test.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-constructor(public _counterService:CounterService,
-  @Inject('appTitle') public config:any
-){
-
-}
- increase(){
-this._counterService.incCounter();
-}
- decrease(){
-this._counterService.decCounter();
-}
-
+export class HomeComponent implements OnInit {
+  constructor(public _testService:TestService) {}
+public count:number=0;
+public data2:boolean=false;
+  ngOnInit(): void {
+    // throw new Error('Method not implemented.');
+  }
+  
+  counter(){
+this.count++;
+this.data2=!this.data2;
+  }
 }

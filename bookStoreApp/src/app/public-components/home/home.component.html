@@ -1,9 +1,3 @@
-<p>home works!</p>
-
-<button (click)="increase()" >counter++</button>
-<button (click)="decrease()">counter--</button>
-<p>counter:{{_counterService.counter}}</p>
-<p>Title = {{config.title}}</p>
-<p>Descreption = {{config.descreption}}</p>
-<h2>Our Authors</h2>
-<app-authors></app-authors>
+<p>home Parent works!</p>
+<button (click)="counter()">counter</button>
+<app-authors [data]="count" [data2]="data2"></app-authors>
