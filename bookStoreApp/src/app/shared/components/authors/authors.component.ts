@@ -10,6 +10,7 @@ import { AuthorsAddressComponent } from '../authors-address/authors-address.comp
 })
 export class AuthorsComponent implements OnInit,OnChanges,DoCheck,AfterContentInit,AfterContentChecked {
   @ContentChild(AuthorsAddressComponent) authorAddress:AuthorsAddressComponent;
+  public childCounter=0;
 @Input() data:number;
 @Input() data2:boolean;
 @Input() author:AuthorsModel;
@@ -34,5 +35,8 @@ export class AuthorsComponent implements OnInit,OnChanges,DoCheck,AfterContentIn
 
   ngOnInit(): void {
     console.log('hello child component ngOninit');
+  }
+  incCounter(){
+    this.childCounter++;
   }
 }

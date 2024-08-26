@@ -1,4 +1,5 @@
 import {
+  AfterViewChecked,
   AfterViewInit,
   Component,
   ElementRef,
@@ -18,10 +19,15 @@ import { TestService } from 'src/app/shared/services/test.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit,AfterViewInit {
+export class HomeComponent implements OnInit,AfterViewInit,AfterViewChecked {
+  @ViewChild(AuthorsComponent) authComponent:AuthorsComponent;
   @ViewChild('btnCounter') btnCounter:ElementRef;
   constructor(public _testService:TestService) {
     console.log('this is parent constructor');
+  }
+  ngAfterViewChecked(): void {
+    // throw new Error('Method not implemented.');
+    console.log(this.authComponent.childCounter);
   }
   ngAfterViewInit(): void {
     // throw new Error('Method not implemented.');
@@ -46,4 +52,6 @@ this.obj.id=this.count++;
 this.address=this.address+this.count;
 // this.obj={id:this.count++,name:'kshitish kumar'};
   }
+
+
 }
