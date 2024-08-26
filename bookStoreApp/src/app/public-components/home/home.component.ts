@@ -18,22 +18,32 @@ import { TestService } from 'src/app/shared/services/test.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,AfterViewInit {
+  @ViewChild('btnCounter') btnCounter:ElementRef;
   constructor(public _testService:TestService) {
     console.log('this is parent constructor');
+  }
+  ngAfterViewInit(): void {
+    // throw new Error('Method not implemented.');
+    console.log(this.btnCounter);
+    this.btnCounter.nativeElement.innerHTML='Button text updated';
+
   }
 public count:number=0;
 public data2:boolean=false;
 public obj:AuthorsModel={id:101,name:'abhishek'};
+public address:string='india';
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     console.log('this is parent ngonInit');
+    console.log(this.btnCounter);
   }
   
   counter(){
 this.count++;
 this.data2=!this.data2;
 this.obj.id=this.count++;
+this.address=this.address+this.count;
 // this.obj={id:this.count++,name:'kshitish kumar'};
   }
 }
