@@ -8,9 +8,10 @@ import { BooksComponent } from './books.component';
 import { SharedModule } from '../shared/shared.module';
 import { RecentBooksComponent } from './components/recent-books/recent-books.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
 
 @NgModule({
-  declarations: [AllBooksComponent, BookDetailsComponent, BooksComponent, RecentBooksComponent, BookCardComponent],
+  declarations: [AllBooksComponent, BookDetailsComponent, BooksComponent, RecentBooksComponent, BookCardComponent, AddBookComponent],
   imports: [CommonModule, BooksRoutingModule, SharedModule],
   // providers:[BookService]
 })
