@@ -28,6 +28,7 @@ saveBook(value:any){
     currency:'$',
     value:value.price
   }
+  book.isPublished=value.isPublished;
   this._bookService.addBook(book);
 console.log(value);
 }

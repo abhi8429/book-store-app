@@ -37,6 +37,8 @@ allBooks.forEach(element => {
       obj.price=element.price;
       obj.title=element.title;
       obj.totalPages=element.totalPages;
+      obj.isPublished=element.isPublished;
+      obj.publishedOn=element.publishedOn;
       this.books.push(obj);
     });
     console.log(this.books);

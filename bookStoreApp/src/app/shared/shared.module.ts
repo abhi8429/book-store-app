@@ -6,6 +6,7 @@ import { MaterialModule } from './material.module';
 import { FooterComponent } from './footer/footer.component';
 import { AuthorsComponent } from './components/authors/authors.component';
 import { AuthorsAddressComponent } from './components/authors-address/authors-address.component';
+// import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -15,11 +16,11 @@ import { AuthorsAddressComponent } from './components/authors-address/authors-ad
     ToolbarComponent,
     FooterComponent,
     AuthorsComponent,
-    AuthorsAddressComponent
+    AuthorsAddressComponent,
   ],
   imports: [
     CommonModule, 
-    MaterialModule
+    MaterialModule,
   ],
   exports:[ToolbarComponent,FooterComponent,MaterialModule,AuthorsComponent,AuthorsAddressComponent]
 })
